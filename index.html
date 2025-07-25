@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Redirecionando...</title>
+  <script>
+    window.onload = function () {
+      const userAgent = navigator.userAgent.toLowerCase();
+
+      const urlDesktop = "https://www.tf.com.br/running";
+      const urlAndroid = "https://play.google.com/store/apps/details?id=br.com.tfsports.customer";
+      const urlApple = "https://apps.apple.com/br/app/tfsports/id1251078517";
+
+      if (/iphone|ipad|ipod/.test(userAgent)) {
+        window.location.href = urlApple;
+      } else if (/android/.test(userAgent)) {
+        window.location.href = urlAndroid;
+      } else {
+        window.location.href = urlDesktop;
+      }
+    };
+  </script>
+</head>
+<body>
+  <p>Redirecionando...</p>
+</body>
+</html>
